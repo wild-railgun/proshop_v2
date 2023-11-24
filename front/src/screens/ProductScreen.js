@@ -1,4 +1,4 @@
-import { useGetProductDetailsQuery } from '../slices/productSlice';
+import { useGetProductDetailsQuery } from '../slices/productApiSlice';
 import { useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { Row, Col, Image, ListGroup, Card, Button } from 'react-bootstrap';
