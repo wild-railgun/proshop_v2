@@ -1,8 +1,17 @@
 import { useGetProductDetailsQuery } from '../slices/productApiSlice';
 import { useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { Row, Col, Image, ListGroup, Card, Button, Form } from 'react-bootstrap';
+import { 
+  Row, 
+  Col, 
+  Image, 
+  ListGroup, 
+  Card, 
+  Button, 
+  Form 
+} from 'react-bootstrap';
 import Rating from '../components/Rating';
 import Loader from '../components/Loader';
 import Message from '../components/Message';
