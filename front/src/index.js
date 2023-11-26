@@ -13,8 +13,8 @@ import {
 } from 'react-router-dom';
 import HomeScreen from './screens/HomeScreen';
 import ProductScreen from './screens/ProductScreen';
-import LoginScreen from './screens/LoginScreen';
 import CartScreen from './screens/CartScreen';
+import LoginScreen from './screens/LoginScreen';
 import store from './store';
 import { Provider } from 'react-redux';
 
