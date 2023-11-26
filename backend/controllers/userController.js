@@ -22,7 +22,7 @@ const authUser = asyncHandler(async (req, res) => {
       sameSite: 'strict', // Prevent CSRF attacks
       maxAge: 60 * 60 * 1000, // 1 hour in milliseconds
     });
-    
+
     res.json({
       _id: user._id,
       name: user.name,
@@ -41,6 +41,17 @@ const authUser = asyncHandler(async (req, res) => {
 const registerUser = asyncHandler(async (req, res) => {
   res.send('register user');
 });
+
+// @desc    Logout user / clear cookie
+// @route   POST /api/users/logout
+// @access  Public
+const logoutUser = (req, res) => {
+  res.cookie('jwt', '', {
+    httpOnly: true,
+    expires: new Date(0),
+  });
+  res.status(200).json({ message: 'Logged out successfully' });
+};
 
 // @desc    Get user profile
 // @route   GET /api/users/profile
@@ -87,6 +98,7 @@ const updateUser = asyncHandler(async (req, res) => {
 export {
   authUser,
   registerUser,
+  logoutUser,
   getUserProfile,
   updateUserProfile,
   getUsers,
