@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { LinkContainer } from 'react-router-bootstrap';
 import { Table, Button, Row, Col } from 'react-bootstrap';
 import { FaEdit, FaPlus, FaTrash } from 'react-icons/fa';
@@ -6,7 +7,7 @@ import Loader from '../../components/Loader';
 import { 
   useGetProductsQuery, 
   useCreateProductMutation 
-} from '../../slices/productsApiSlice';
+} from '../../slices/productApiSlice';
 import { toast } from 'react-toastify';
 
 const ProductListScreen = () => {
