@@ -1,4 +1,4 @@
-import { useGetProductDetailsQuery } from '../slices/productApiSlice';
+import { useGetProductDetailsQuery } from '../slices/productsApiSlice';
 import { useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
