@@ -1,7 +1,6 @@
 import { useGetProductDetailsQuery, useCreateReviewMutation } from '../slices/productsApiSlice';
 import { useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { toast } from 'react-toastify';
